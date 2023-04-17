@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Information Form</title>
+    <style>
+        /* Style for form container */
+        .form-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style for form input fields */
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /* Style for radio button container */
+        .form-container .radio-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for radio button label */
+        .form-container .radio-container label {
+            margin-left: 5px;
+        }
+
+        /* Style for "Pay Now" button */
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h2>User Information Form</h2>
+    <form action="payform.html" method="post">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email ID" required>
+        <input type="tel" name="contact" placeholder="Contact Number" required>
+        <select name="num_people" required>
+            <option value="">Number of People</option>
+            <option value="1">0</option>
+            <option value="2">1</option>
+        </select>
+        <div class="radio-container">
+            <label for="vaccinated">Dogs are vaccinated:</label>
+            <input type="radio" name="vaccinated" value="yes" id="vaccinated" required>
+        </div>
+        <div class="radio-container">
+            <label for="not_vaccinated">Dogs are not vaccinated:</label>
+            <input type="radio" name="vaccinated" value="no" id="not_vaccinated" required>
+        </div>
+        <button type="submit">Pay Now</button>
+    </form>
+</div>
+</body>
+</html>
